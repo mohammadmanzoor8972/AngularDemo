@@ -1,0 +1,33 @@
+
+<div class="row p-sm-2 py-2 px-0 border my-2">
+  <div class="col-lg-2 col-md-3 col-4">
+    <span>{{data?.rank}}. </span> {{data?.product?.caption?.text}}
+  </div>
+
+  <div class="col-lg-3 col-md-4 col-3">
+      <app-tarif-upload-download
+      downloadSpeed={{data?.contractTerm?.downloadSpeed?.content?.text}}
+      uploadSpeed={{data?.contractTerm?.uploadSpeed?.content?.text}}
+      >
+        </app-tarif-upload-download>
+  </div>
+
+  <div class="col-lg-3 col-md-3 d-md-none d-lg-block d-none">
+   <ul>
+     <li>Tariff Plan 1</li>
+     <li>Tariff Plan 1</li>
+     <li>Tariff Plan 1</li>
+   </ul>
+  </div>
+
+  <div class="col-lg-4 col-md-5 col-5 d-md-block d-flex d-sm-block text-right flex-row justify-content-end align-items-stretch">
+    <div class="mb-3 tariff-price pr-2 pr-sm-0">
+     <h5> {{data?.cost?.effectiveCost?.content?.text}} </h5>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-outline-secondary px-sm-5 px-2 py-4 py-sm-0">
+      <span class="d-sm-inline-block d-none"> To Tariff </span>  <i class="fa fa-arrow-right" ></i>
+      </button>
+    </div>
+  </div>
+</div>

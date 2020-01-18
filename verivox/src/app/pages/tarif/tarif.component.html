@@ -1,0 +1,12 @@
+
+<div class="container-fluid">
+  <div class="m-3">
+    <button (click)="sortData('download')" class="btn btn-pirmary">Download</button>
+    <button (click)="sortData('upload')" class="btn btn-pirmary">Upload</button>
+
+    <button (click)="sortData('amount')" class="btn btn-pirmary">Amount</button>
+    <div *ngFor="let tariff of tariffList">
+        <app-tarif-item [data]="tariff"></app-tarif-item>
+    </div>
+</div>
+</div>

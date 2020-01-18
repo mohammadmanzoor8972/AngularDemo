@@ -1,0 +1,25 @@
+.download {
+  span {
+    border: 1px solid #eee;
+  }
+}
+
+
+
+// responsive for mobile view
+
+@media (max-width: 767px) {
+  .download {
+    span {
+      border: unset;
+    }
+  }
+
+  .tariff-price {
+    h5 {
+      font-size: 14px;
+    }
+  }
+}
+
+

@@ -1,0 +1,21 @@
+
+<div class="container">
+
+<div class="title d-flex flex-row flex-wrap">
+    <div class="upvote"> 
+        <h3>{{book?.title}}</h3> 
+        <p class="author">{{book?.author}}</p>
+        </div>
+        <app-upvote [upvoted]="book.upvoted" [upvotes]="book.upvotes" class="justify-content-end"></app-upvote>
+</div>
+<div class="cover text-center">
+    <img src="{{book.cover}}"/>
+</div>
+<h4>Synopsis</h4>
+<p>
+{{book.synopsis}}
+</p>
+<strong>
+<span class="rating">Rating {{book?.rating}}/10</span></strong>
+       
+</div>

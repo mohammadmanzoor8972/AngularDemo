@@ -1,0 +1,8 @@
+<nav class="navbar navbar-light bg-warning justify-content-between">
+        <a class="navbar-brand">Reedsy's Book Store</a>
+        <form class="form-inline" (submit)="submitHnadler()">
+          <input #input class="form-control mr-sm-2" type="search"
+           placeholder="Search" aria-label="Search" value="" [(ngModel)]="search" name="search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="searchHandler(input)">Search</button>
+        </form>
+      </nav>

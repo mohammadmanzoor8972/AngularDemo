@@ -1,0 +1,38 @@
+<app-header (handler)="filterBook($event)"></app-header>
+<div class="title">
+        <h2 class="text-center">Top books of all time</h2>
+    </div>
+<div class="container" *ngIf="bookList.length>0">
+
+
+    <div class="book-list">
+        <div class="book-item d-flex flex-row" *ngFor="let book of bookList">
+            <div class="book-desc  overflow-hidden">
+                <h5 routerLink="/book/{{book.slug}}">{{book?.title}}</h5> <span class="rating">{{book?.rating}}</span>
+                <p class="author">{{book?.author}}</p>
+                <p class="synopsis">
+                    {{book?.synopsis}}
+                </p>
+                <app-upvote [upvoted]="book.upvoted" [upvotes]="book.upvotes"></app-upvote>
+                
+            </div>
+            <div class="book-image" routerLink="/book/{{book.slug}}">
+                <img src="{{book.cover}}"/>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+    <!-- Content here -->
+  </div>
+
+<div class="container text-center" *ngIf="bookList.length==0">
+Book not found !
+</div>
